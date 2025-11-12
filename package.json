@@ -1,0 +1,33 @@
+{
+  "name": "cse-motors",
+  "version": "1.0.0",
+  "description": "CSE Motors - Premium Quality Used Vehicles | CSE340 Project by Nyasha Chimutapira",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "test": "echo 'No tests specified'"
+  },
+  "keywords": [
+    "express",
+    "ejs",
+    "web-development",
+    "car-dealership",
+    "responsive-design",
+    "cse340"
+  ],
+  "author": "Nyasha Chimutapira",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "express-ejs-layouts": "^2.5.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

@@ -1,0 +1,701 @@
+/* CSE Motors - Exact Layout Recreation */
+/* Mobile First - Matches screenshot precisely */
+
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    background: #f5f5f5;
+}
+
+/* Container */
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Header Styles */
+.site-header {
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.header-top {
+    background: #fff;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.logo h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+
+.header-nav {
+    display: none; /* Hidden on mobile */
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #666;
+    font-weight: 500;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+.nav-link:hover {
+    color: #000;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+}
+
+.account-btn {
+    background: #f8f8f8;
+    border: 1px solid #ddd;
+    color: #666;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+}
+
+.account-btn:hover {
+    background: #f0f0f0;
+    border-color: #ccc;
+}
+
+/* Main Navigation */
+.main-navigation {
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+}
+
+.main-nav-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    gap: 40px;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: #666;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 8px 0;
+    display: block;
+}
+
+.nav-item.active a,
+.nav-item a:hover {
+    color: #000;
+}
+
+.nav-item.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #000;
+}
+
+/* Main Content */
+.main-content {
+    padding: 20px 0;
+    min-height: calc(100vh - 200px);
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.hero-title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+    margin: 0 0 30px 0;
+    line-height: 1.2;
+}
+
+/* Featured Vehicle */
+.featured-vehicle {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+
+.vehicle-main {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+}
+
+.vehicle-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.vehicle-features-overlay {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    z-index: 2;
+}
+
+.feature-badge {
+    background: rgba(255,255,255,0.9);
+    color: #333;
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 12px;
+    font-weight: 500;
+    border: 1px solid #ddd;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+}
+
+.vehicle-details {
+    padding: 20px;
+    text-align: center;
+}
+
+.vehicle-name {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin: 0 0 20px 0;
+}
+
+.own-today-btn {
+    background: #007cba;
+    color: #fff;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.own-today-btn:hover {
+    background: #005a87;
+}
+
+/* Content Grid */
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.section-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin: 0 0 25px 0;
+    text-align: center;
+}
+
+/* Upgrades */
+.upgrades-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.upgrade-item {
+    text-align: center;
+    background: #fff;
+    border-radius: 6px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.upgrade-image {
+    width: 100%;
+    height: 80px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    overflow: hidden;
+    background: #f8f8f8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.upgrade-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Upgrade Image Backgrounds */
+.flux-capacitor {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.flame-decals {
+    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+    color: white;
+}
+
+.bumper-stickers {
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+    color: #333;
+}
+
+.hub-caps {
+    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+    color: #333;
+}
+
+.upgrade-name {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    margin: 0;
+    text-align: center;
+}
+
+/* Reviews */
+.reviews-list {
+    background: #fff;
+    border-radius: 6px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.review-item {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.review-item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.review-rating {
+    display: inline-block;
+    background: #f0f0f0;
+    color: #666;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.review-text {
+    font-size: 14px;
+    color: #666;
+    font-style: italic;
+    margin: 0;
+    line-height: 1.4;
+    quotes: "“" "”" "‘" "’";
+}
+
+.review-text::before {
+    content: open-quote;
+    font-size: 24px;
+    color: #007cba;
+    vertical-align: top;
+    margin-right: 2px;
+}
+
+.review-text::after {
+    content: close-quote;
+    font-size: 24px;
+    color: #007cba;
+    vertical-align: bottom;
+    margin-left: 2px;
+}
+
+/* Footer */
+.site-footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+.footer-content p {
+    margin: 0;
+    font-size: 14px;
+    color: #ccc;
+}
+
+/* Mobile Styles (Default) */
+@media screen and (max-width: 767px) {
+    .container {
+        padding: 0 10px;
+    }
+    
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .logo h1 {
+        font-size: 20px;
+    }
+    
+    .main-nav-list {
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+    
+    .nav-item a {
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+    
+    .hero-title {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    
+    .vehicle-main {
+        height: 200px;
+    }
+    
+    .vehicle-features-overlay {
+        flex-direction: column;
+        gap: 5px;
+        top: 10px;
+        left: 10px;
+        right: 10px;
+    }
+    
+    .feature-badge {
+        font-size: 11px;
+        padding: 3px 8px;
+    }
+    
+    .vehicle-details {
+        padding: 15px;
+    }
+    
+    .vehicle-name {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+    
+    .own-today-btn {
+        padding: 10px 20px;
+        font-size: 14px;
+        width: 100%;
+        max-width: 200px;
+    }
+    
+    .content-grid {
+        gap: 30px;
+    }
+    
+    .section-title {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+    
+    .upgrades-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    
+    .upgrade-item {
+        padding: 10px;
+    }
+    
+    .upgrade-image {
+        height: 60px;
+    }
+    
+    .upgrade-name {
+        font-size: 13px;
+    }
+    
+    .reviews-list {
+        padding: 15px;
+    }
+    
+    .review-item {
+        margin-bottom: 12px;
+        padding-bottom: 12px;
+    }
+    
+    .review-text {
+        font-size: 13px;
+    }
+    
+    .review-text::before,
+    .review-text::after {
+        font-size: 20px;
+    }
+}
+
+/* Tablet Styles */
+@media screen and (min-width: 768px) {
+    .header-nav {
+        display: block;
+    }
+    
+    .header-content {
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    .main-nav-list {
+        gap: 50px;
+    }
+    
+    .nav-item a {
+        font-size: 16px;
+    }
+    
+    .hero-title {
+        font-size: 28px;
+    }
+    
+    .vehicle-main {
+        height: 280px;
+    }
+    
+    .vehicle-features-overlay {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    
+    .feature-badge {
+        font-size: 12px;
+        padding: 4px 10px;
+        white-space: nowrap;
+    }
+    
+    .content-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+        align-items: start;
+    }
+    
+    .section-title {
+        text-align: left;
+        margin-bottom: 30px;
+    }
+    
+    .upgrades-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    .reviews-list {
+        padding: 25px;
+    }
+}
+
+/* Desktop Styles */
+@media screen and (min-width: 1024px) {
+    .container {
+        padding: 0 20px;
+    }
+    
+    .header-content {
+        max-width: 960px;
+        margin: 0 auto;
+    }
+    
+    .logo h1 {
+        font-size: 28px;
+    }
+    
+    .nav-list {
+        gap: 40px;
+    }
+    
+    .main-nav-list {
+        max-width: 960px;
+        margin: 0 auto;
+        gap: 60px;
+    }
+    
+    .hero-title {
+        font-size: 36px;
+        margin-bottom: 40px;
+    }
+    
+    .vehicle-main {
+        height: 320px;
+    }
+    
+    .vehicle-details {
+        padding: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .vehicle-name {
+        font-size: 28px;
+        margin: 0;
+        text-align: left;
+    }
+    
+    .own-today-btn {
+        width: auto;
+        margin-left: 20px;
+    }
+    
+    .content-grid {
+        max-width: 960px;
+        margin: 0 auto;
+        gap: 60px;
+    }
+    
+    .upgrades-grid {
+        gap: 20px;
+    }
+    
+    .upgrade-item {
+        padding: 20px;
+    }
+    
+    .upgrade-image {
+        height: 100px;
+    }
+    
+    .reviews-list {
+        padding: 30px;
+    }
+    
+    .section-title {
+        font-size: 24px;
+    }
+}
+
+/* Large Desktop */
+@media screen and (min-width: 1200px) {
+    .container {
+        padding: 0 30px;
+    }
+    
+    .content-grid {
+        gap: 80px;
+    }
+}
+
+/* Accessibility */
+*:focus {
+    outline: 2px solid #007cba;
+    outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .site-header,
+    .main-navigation,
+    .site-footer {
+        display: none;
+    }
+    
+    .main-content {
+        padding: 0;
+    }
+    
+    .featured-vehicle,
+    .upgrades-grid,
+    .reviews-list {
+        box-shadow: none;
+        border: 1px solid #000;
+    }
+    
+    .own-today-btn {
+        background: #007cba !important;
+        color: #fff !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+}
+
+/* High Contrast */
+@media (prefers-contrast: high) {
+    .feature-badge,
+    .account-btn,
+    .own-today-btn {
+        border: 2px solid;
+    }
+    
+    .nav-item.active::after {
+        height: 3px;
+        background: #000;
+    }
+}
